@@ -15,7 +15,7 @@
 
             @if ($logo)
                 <img
-                    class="h-10 w-auto"
+                    class="h-10 max-w-[200px] w-auto object-contain"
                     src="{{ Storage::url($logo) }}"
                     alt="{{ config('app.name') }}"
                 />
