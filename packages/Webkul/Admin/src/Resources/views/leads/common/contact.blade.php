@@ -19,7 +19,6 @@
                 ::src="src"
                 name="person[id]"
                 ::params="params"
-                rules="required"
                 ::value="{id: person.id, name: person.name}"
                 :placeholder="trans('admin::app.leads.common.contact.name')"
                 @on-selected="addPerson"
@@ -30,11 +29,10 @@
                 type="hidden"
                 name="person[name]"
                 v-model="person.name"
-                v-if="person.name"
                 rules="required"
             />
         
-            <x-admin::form.control-group.error control-name="person[id]" />
+            <x-admin::form.control-group.error control-name="person[name]" />
         </x-admin::form.control-group>
 
         <!-- Person Email -->
