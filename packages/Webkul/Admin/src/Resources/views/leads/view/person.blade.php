@@ -70,7 +70,7 @@
                                     </a>
         
                                     <span class="text-gray-500 dark:text-gray-300">
-                                        ({{ $email['label'] }})
+                                        (@lang('admin::app.common.types.' . $email['label']))
                                     </span>
                                 </div>
                             @endif
@@ -91,7 +91,7 @@
                                     </a>
             
                                     <span class="text-gray-500 dark:text-gray-300">
-                                        ({{ $contactNumber['label'] }})
+                                        (@lang('admin::app.common.types.' . $contactNumber['label']))
                                     </span>
                                 </div>
                             @endif

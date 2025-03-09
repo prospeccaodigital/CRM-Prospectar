@@ -1754,6 +1754,14 @@ return [
             'update-emails-title'  => 'Atualizar E-mails de Contato',
             'work'                 => 'Trabalho',
         ],
+
+        'types' => [
+            'work'   => 'Trabalho',
+            'home'   => 'Casa',
+            'mobile' => 'Celular',
+            'main'   => 'Principal',
+            'other'  => 'Outro',
+        ],
     ],
 
     'leads' => [
