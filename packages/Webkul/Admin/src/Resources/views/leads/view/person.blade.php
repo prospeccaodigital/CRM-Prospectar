@@ -79,18 +79,20 @@
                         {!! view_render_event('admin.leads.view.person.contact_numbers.before', ['lead' => $lead]) !!}
                     
                         @foreach ($lead->person->contact_numbers as $contactNumber)
-                            <div class="flex gap-1">
-                                <a  
-                                    class="text-brandColor"
-                                    href="callto:{{ $contactNumber['value'] }}"
-                                >
-                                    {{ $contactNumber['value'] }}
-                                </a>
-        
-                                <span class="text-gray-500 dark:text-gray-300">
-                                    ({{ $contactNumber['label'] }})
-                                </span>
-                            </div>
+                            @if (!empty($contactNumber['value']))
+                                <div class="flex gap-1">
+                                    <a  
+                                        class="text-brandColor"
+                                        href="callto:{{ $contactNumber['value'] }}"
+                                    >
+                                        {{ $contactNumber['value'] }}
+                                    </a>
+            
+                                    <span class="text-gray-500 dark:text-gray-300">
+                                        ({{ $contactNumber['label'] }})
+                                    </span>
+                                </div>
+                            @endif
                         @endforeach
         
                         {!! view_render_event('admin.leads.view.person.contact_numbers.after', ['lead' => $lead]) !!}
