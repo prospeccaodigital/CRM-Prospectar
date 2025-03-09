@@ -11,12 +11,15 @@
     
     @php
         $favicon = core()->getConfigData('general.general.favicon.favicon_image');
-        $faviconUrl = $favicon ? Storage::url($favicon) . '?v=' . filemtime(Storage::path($favicon)) : vite()->asset('images/favicon.ico');
     @endphp
     
-    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
-    <meta http-equiv="Expires" content="{{ date('D, d M Y H:i:s', time() + 31536000) }} GMT">
-    <link rel="icon" href="{{ $faviconUrl }}" type="image/x-icon">
+    @if ($favicon)
+        <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+        <meta http-equiv="Expires" content="{{ date('D, d M Y H:i:s', time() + 31536000) }} GMT">
+        <link rel="icon" href="{{ Storage::url($favicon) }}?v={{ filemtime(Storage::path($favicon)) }}" type="image/x-icon">
+    @else
+        <link rel="icon" href="{{ vite()->asset('images/favicon.ico') }}" type="image/x-icon">
+    @endif
 
     {!! view_render_event('admin.layout.head.before') !!}
 

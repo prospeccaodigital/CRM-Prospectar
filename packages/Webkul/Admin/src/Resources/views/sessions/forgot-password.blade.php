@@ -7,15 +7,21 @@
     <div class="flex h-[100vh] flex-col items-center justify-center gap-10">
         <div class="flex flex-col items-center gap-5">
             <!-- Logo -->
-            @if ($logo = core()->getConfigData('general.design.admin_logo.logo_image'))
+            @php
+                $loginLogo = core()->getConfigData('general.general.login_logo.logo_image');
+                $adminLogo = core()->getConfigData('general.general.admin_logo.logo_image');
+                $logo = $loginLogo ?: $adminLogo;
+            @endphp
+
+            @if ($logo)
                 <img
-                    class="h-10 w-[110px]"
+                    class="h-10 w-auto"
                     src="{{ Storage::url($logo) }}"
                     alt="{{ config('app.name') }}"
                 />
             @else
                 <img
-                    class="w-max"
+                    class="h-10 w-auto"
                     src="{{ vite()->asset('images/logo.svg') }}"
                     alt="{{ config('app.name') }}"
                 />
@@ -73,14 +79,6 @@
 
                 {!! view_render_event('admin.sessions.forgor_password.form_controls.after') !!}
             </div>
-        </div>
-
-        <!-- Powered By -->
-        <div class="text-sm font-normal">
-            @lang('admin::app.components.layouts.powered-by.description', [
-                'krayin' => '<a class="text-brandColor hover:underline " href="https://krayincrm.com/">Krayin</a>',
-                'webkul' => '<a class="text-brandColor hover:underline " href="https://webkul.com/">Webkul</a>',
-            ]) 
         </div>
     </div>
 </x-admin::layouts.anonymous>

@@ -43,6 +43,19 @@ return [
             ],
         ],
     ], [
+        'key'    => 'general.general.login_logo',
+        'name'   => 'admin::app.configuration.index.general.general.login-logo.title',
+        'info'   => 'admin::app.configuration.index.general.general.login-logo.title-info',
+        'sort'   => 2,
+        'fields' => [
+            [
+                'name'          => 'logo_image',
+                'title'         => 'admin::app.configuration.index.general.general.login-logo.logo-image',
+                'type'          => 'image',
+                'validation'    => 'mimes:bmp,jpeg,jpg,png,webp,svg',
+            ],
+        ],
+    ], [
         'key'    => 'general.general.favicon',
         'name'   => 'admin::app.configuration.index.general.general.favicon.title',
         'info'   => 'admin::app.configuration.index.general.general.favicon.title-info',

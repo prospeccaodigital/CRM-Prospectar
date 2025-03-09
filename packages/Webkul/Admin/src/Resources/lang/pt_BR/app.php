@@ -1984,6 +1984,12 @@ return [
                         'title-info' => 'Configure a imagem do logo para o seu painel de administração.',
                     ],
 
+                    'login-logo' => [
+                        'logo-image' => 'Imagem do Logo',
+                        'title'      => 'Logo das Telas de Login',
+                        'title-info' => 'Configure a imagem do logo para as telas de login, redefinição de senha e esqueci minha senha. Se não definida, será usada a Logo do Admin.',
+                    ],
+
                     'favicon' => [
                         'title'         => 'Favicon',
                         'title-info'    => 'Configure o ícone que será exibido nas abas do navegador.',
