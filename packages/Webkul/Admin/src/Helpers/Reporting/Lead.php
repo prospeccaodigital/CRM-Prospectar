@@ -294,14 +294,15 @@ class Lead extends AbstractReporting
             ->resetModel()
             ->select(
                 'lead_pipeline_stages.name',
-                DB::raw('COUNT(lead_value) as total')
+                DB::raw('COUNT(lead_value) as total'),
+                'lead_pipeline_stages.sort_order'
             )
             ->leftJoin('lead_pipeline_stages', 'leads.lead_pipeline_stage_id', '=', 'lead_pipeline_stages.id')
             ->whereNotIn('lead_pipeline_stage_id', $this->wonStageIds)
             ->whereNotIn('lead_pipeline_stage_id', $this->lostStageIds)
             ->whereBetween('leads.created_at', [$this->startDate, $this->endDate])
             ->groupBy('lead_pipeline_stage_id')
-            ->orderByDesc('total')
+            ->orderBy('lead_pipeline_stages.sort_order', 'asc')
             ->get();
     }
 
