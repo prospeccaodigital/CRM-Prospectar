@@ -20,7 +20,7 @@ class Lead extends Model implements LeadContract
 
     protected $casts = [
         'closed_at'           => 'datetime',
-        'expected_close_date' => 'date',
+        'expected_close_date' => 'date:Y-m-d|nullable',
     ];
 
     /**

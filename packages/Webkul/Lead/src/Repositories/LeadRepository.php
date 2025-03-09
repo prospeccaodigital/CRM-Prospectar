@@ -122,6 +122,11 @@ class LeadRepository extends Repository
             ]));
         }
 
+        // Remove expected_close_date if empty
+        if (isset($data['expected_close_date']) && empty($data['expected_close_date'])) {
+            unset($data['expected_close_date']);
+        }
+
         $lead = parent::create(array_merge([
             'person_id'              => $person->id,
             'lead_pipeline_id'       => 1,
@@ -167,6 +172,11 @@ class LeadRepository extends Repository
             $data = array_merge([
                 'person_id' => $person->id,
             ], $data);
+        }
+
+        // Remove expected_close_date if empty
+        if (isset($data['expected_close_date']) && empty($data['expected_close_date'])) {
+            unset($data['expected_close_date']);
         }
 
         if (isset($data['lead_pipeline_stage_id'])) {
