@@ -228,7 +228,7 @@
                         <img
                             :src="src"
                             :alt="name"
-                            class="top-15 rounded-3 border-3 relative h-[33px] w-[33px] border-gray-500 ltr:mr-5 rtl:ml-5"
+                            class="relative h-[33px] w-auto max-w-[200px] object-contain ltr:mr-5 rtl:ml-5"
                         />
                     </a>
                     
