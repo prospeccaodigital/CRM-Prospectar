@@ -31,7 +31,7 @@ class Attribute extends Model implements AttributeContract
      */
     public function getTranslatedName($locale = null)
     {
-        if (!$locale) {
+        if (! $locale) {
             $locale = app()->getLocale();
         }
 
