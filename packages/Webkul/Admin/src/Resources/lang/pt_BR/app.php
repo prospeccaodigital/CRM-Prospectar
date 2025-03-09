@@ -2,8 +2,8 @@
 
 return [
     'acl' => [
-        'leads'           => 'Oportunidades',
-        'lead'            => 'Oportunidade',
+        'leads'           => 'Negócios',
+        'lead'            => 'Negócio',
         'quotes'          => 'Cotações',
         'mail'            => 'E-mail',
         'inbox'           => 'Caixa de Entrada',
@@ -49,8 +49,8 @@ return [
             'email'                => 'Endereço de E-mail',
             'forget-password-link' => 'Esqueceu a Senha?',
             'password'             => 'Senha',
-            'submit-btn'           => 'Acessar',
-            'title'                => 'Acessar',
+            'submit-btn'           => 'Entrar',
+            'title'                => 'Entrar',
         ],
 
         'forget-password' => [
@@ -1787,7 +1787,7 @@ return [
                 'sales-person'        => 'Vendedor',
                 'subject'             => 'Assunto',
                 'source'              => 'Origem',
-                'lead-value'          => 'Valor do Negócio',
+                'lead-value'          => 'Valor do negócio',
                 'lead-type'           => 'Tipo de Negócio',
                 'tag-name'            => 'Nome da Tag',
                 'contact-person'      => 'Pessoa de Contato',
@@ -1817,7 +1817,7 @@ return [
                     'source'              => 'Origem',
                     'title'               => 'Título',
                     'tags'                => 'Tags',
-                    'expected-close-date' => 'Data Esperada de Fechamento',
+                    'expected-close-date' => 'Data de fechamento',
                     'created-at'          => 'Criado em',
                 ],
 

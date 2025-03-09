@@ -240,4 +240,14 @@ class Core
     {
         return system_config()->getConfigData($field);
     }
+
+    /**
+     * Return base currency symbol.
+     *
+     * @return string
+     */
+    public function getBaseCurrencySymbol()
+    {
+        return $this->currencySymbol(config('app.currency'));
+    }
 }

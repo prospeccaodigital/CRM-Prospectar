@@ -5,9 +5,9 @@ return [
         'attributes' => [
             'leads' => [
                 'description'         => 'Descrição',
-                'expected-close-date' => 'Data de Fechamento Esperada',
-                'lead-value'          => 'Valor da Oportunidade',
-                'sales-owner'         => 'Responsável pela Venda',
+                'expected-close-date' => 'Data de fechamento',
+                'lead-value'          => 'Valor do negócio',
+                'sales-owner'         => 'Responsável',
                 'source'              => 'Origem',
                 'title'               => 'Título',
                 'type'                => 'Tipo',
@@ -21,13 +21,13 @@ return [
                 'job-title'       => 'Cargo',
                 'name'            => 'Nome',
                 'organization'    => 'Empresa',
-                'sales-owner'     => 'Responsável pela Venda',
+                'sales-owner'     => 'Responsável',
             ],
 
             'organizations' => [
                 'address'     => 'Endereço',
                 'name'        => 'Nome',
-                'sales-owner' => 'Responsável pela Venda',
+                'sales-owner' => 'Responsável',
             ],
 
             'products' => [
