@@ -20,7 +20,7 @@
             for="{{ $attribute->code }}"
             :class="$attribute->is_required ? 'required' : ''"
         >
-            {{ $attribute->name }}
+            {{ $attribute->getTranslatedName() }}
 
             @if ($attribute->type == 'price')
                 <span class="currency-code">({{ core()->getBaseCurrencySymbol() }})</span>

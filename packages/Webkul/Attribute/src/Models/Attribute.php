@@ -14,16 +14,39 @@ class Attribute extends Model implements AttributeContract
      */
     protected $fillable = [
         'code',
-        'name',
         'type',
-        'entity_type',
+        'name',
         'lookup_type',
+        'entity_type',
+        'sort_order',
+        'validation',
         'is_required',
         'is_unique',
         'quick_add',
-        'validation',
         'is_user_defined',
     ];
+
+    /**
+     * Get the translated name based on locale
+     */
+    public function getTranslatedName($locale = null)
+    {
+        if (!$locale) {
+            $locale = app()->getLocale();
+        }
+
+        $translation = $this->translations()->where('locale', $locale)->first();
+
+        return $translation ? $translation->name : $this->name;
+    }
+
+    /**
+     * Get the translations for this attribute
+     */
+    public function translations()
+    {
+        return $this->hasMany(AttributeTranslation::class);
+    }
 
     /**
      * Get the options.
