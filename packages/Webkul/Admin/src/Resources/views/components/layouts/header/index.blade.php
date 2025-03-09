@@ -83,11 +83,20 @@
             <!-- Admin Dropdown -->
             <x-slot:content class="mt-2 border-t-0 !p-0">
                 <div class="flex items-center gap-1.5 border border-x-0 border-b-gray-300 px-5 py-2.5 dark:border-gray-800">
-                    <img
-                        src="{{ url('cache/logo.png') }}"
-                        width="24"
-                        height="24"
-                    />
+                    @if ($logo = core()->getConfigData('general.general.admin_logo.logo_image'))
+                        <img
+                            src="{{ Storage::url($logo) }}"
+                            width="24"
+                            height="24"
+                            alt="{{ config('app.name') }}"
+                        />
+                    @else
+                        <img
+                            src="{{ url('cache/logo.png') }}"
+                            width="24"
+                            height="24"
+                        />
+                    @endif
 
                     <!-- Version -->
                     <p class="text-gray-400">
@@ -133,7 +142,7 @@
     <!-- Drawer Header -->
     <x-slot:header>
         <div class="flex items-center justify-between">
-            @if ($logo = core()->getConfigData('general.design.admin_logo.logo_image'))
+            @if ($logo = core()->getConfigData('general.general.admin_logo.logo_image'))
                 <img
                     class="h-10"
                     src="{{ Storage::url($logo) }}"

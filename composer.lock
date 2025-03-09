@@ -4485,21 +4485,21 @@
         },
         {
             "name": "prettus/laravel-validation",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andersao/laravel-validator.git",
-                "reference": "d990a2cce135bcfced8db7cfff827cd9055740b2"
+                "reference": "fc6ecaaedb482767592eba2a4178792437c86bda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andersao/laravel-validator/zipball/d990a2cce135bcfced8db7cfff827cd9055740b2",
-                "reference": "d990a2cce135bcfced8db7cfff827cd9055740b2",
+                "url": "https://api.github.com/repos/andersao/laravel-validator/zipball/fc6ecaaedb482767592eba2a4178792437c86bda",
+                "reference": "fc6ecaaedb482767592eba2a4178792437c86bda",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "~5.4|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
-                "illuminate/validation": "~5.4|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+                "illuminate/support": "~5.4|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/validation": "~5.4|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
                 "php": ">=5.4.0"
             },
             "type": "library",
@@ -4531,7 +4531,7 @@
                 "source": "https://github.com/andersao/laravel-validation",
                 "wiki": "https://github.com/andersao/laravel-validation"
             },
-            "time": "2024-05-05T23:33:47+00:00"
+            "time": "2025-03-07T18:33:05+00:00"
         },
         {
             "name": "psr/cache",
