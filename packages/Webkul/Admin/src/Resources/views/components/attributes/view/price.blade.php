@@ -9,4 +9,5 @@
     ::errors="errors"
     :url="$url"
     :allow-edit="$allowEdit"
+    ::value-label="$admin.formatPrice('{{ $value }}')"
 />
