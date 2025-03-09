@@ -60,18 +60,20 @@
                         {!! view_render_event('admin.leads.view.person.email.before', ['lead' => $lead]) !!}
         
                         @foreach ($lead->person->emails as $email)
-                            <div class="flex gap-1">
-                                <a 
-                                    class="text-brandColor"
-                                    href="mailto:{{ $email['value'] }}"
-                                >
-                                    {{ $email['value'] }}
-                                </a>
+                            @if (!empty($email['value']))
+                                <div class="flex gap-1">
+                                    <a 
+                                        class="text-brandColor"
+                                        href="mailto:{{ $email['value'] }}"
+                                    >
+                                        {{ $email['value'] }}
+                                    </a>
         
-                                <span class="text-gray-500 dark:text-gray-300">
-                                    ({{ $email['label'] }})
-                                </span>
-                            </div>
+                                    <span class="text-gray-500 dark:text-gray-300">
+                                        ({{ $email['label'] }})
+                                    </span>
+                                </div>
+                            @endif
                         @endforeach
         
                         {!! view_render_event('admin.leads.view.person.email.after', ['lead' => $lead]) !!}
