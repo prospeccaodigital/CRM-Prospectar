@@ -6,9 +6,18 @@
 >
 
 <head>
-    <title>{{ $title ?? '' }}</title>
-
     <meta charset="UTF-8">
+    
+    @php
+        $favicon = core()->getConfigData('general.general.favicon.favicon_image');
+        $faviconUrl = $favicon ? Storage::url($favicon) . '?v=' . filemtime(Storage::path($favicon)) : vite()->asset('images/favicon.ico');
+    @endphp
+    
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta http-equiv="Expires" content="{{ date('D, d M Y H:i:s', time() + 31536000) }} GMT">
+    <link rel="icon" href="{{ $faviconUrl }}" type="image/x-icon">
+
+    <title>{{ $title ?? '' }}</title>
 
     <meta
         http-equiv="X-UA-Compatible"
@@ -44,22 +53,6 @@
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
         rel="stylesheet"
     />
-
-    @if ($favicon = core()->getConfigData('general.design.admin_logo.favicon'))
-        <link
-            type="image/x-icon"
-            href="{{ Storage::url($favicon) }}"
-            rel="shortcut icon"
-            sizes="16x16"
-        >
-    @else
-        <link
-            type="image/x-icon"
-            href="{{ vite()->asset('images/favicon.ico') }}"
-            rel="shortcut icon"
-            sizes="16x16"
-        />
-    @endif
 
     @stack('styles')
 

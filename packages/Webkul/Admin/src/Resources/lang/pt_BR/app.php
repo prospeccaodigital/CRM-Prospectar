@@ -1983,6 +1983,12 @@ return [
                         'title'      => 'Logo do Admin',
                         'title-info' => 'Configure a imagem do logo para o seu painel de administração.',
                     ],
+
+                    'favicon' => [
+                        'title'         => 'Favicon',
+                        'title-info'    => 'Configure o ícone que será exibido nas abas do navegador.',
+                        'favicon-image' => 'Imagem do Favicon',
+                    ],
                 ],
             ],
 

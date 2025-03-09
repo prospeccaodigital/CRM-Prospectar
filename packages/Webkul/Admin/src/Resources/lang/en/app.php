@@ -2095,6 +2095,12 @@ return [
                         'title'      => 'Admin Logo',
                         'title-info' => 'Configure logo image for your admin panel.',
                     ],
+
+                    'favicon' => [
+                        'title'         => 'Favicon',
+                        'title-info'    => 'Configure the favicon that will be displayed in browser tabs.',
+                        'favicon-image' => 'Favicon Image',
+                    ],
                 ],
 
                 'settings' => [
@@ -2271,7 +2277,7 @@ return [
         'product'              => 'Product',
         'settings'             => 'Settings',
         'user'                 => 'User',
-        'user-info'            => 'Manage all your users and their permissions in the CRM, what they’re allowed to do.',
+        'user-info'            => 'Manage all your users and their permissions in the CRM, what they are allowed to do.',
         'groups'               => 'Groups',
         'groups-info'          => 'Add, edit or delete groups from CRM',
         'roles'                => 'Roles',

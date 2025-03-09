@@ -43,6 +43,19 @@ return [
             ],
         ],
     ], [
+        'key'    => 'general.general.favicon',
+        'name'   => 'admin::app.configuration.index.general.general.favicon.title',
+        'info'   => 'admin::app.configuration.index.general.general.favicon.title-info',
+        'sort'   => 3,
+        'fields' => [
+            [
+                'name'          => 'favicon_image',
+                'title'         => 'admin::app.configuration.index.general.general.favicon.favicon-image',
+                'type'          => 'image',
+                'validation'    => 'mimes:ico,png,webp',
+            ],
+        ],
+    ], [
         'key'    => 'general.settings',
         'name'   => 'admin::app.configuration.index.general.settings.title',
         'info'   => 'admin::app.configuration.index.general.settings.info',
